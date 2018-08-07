@@ -11,17 +11,12 @@ terraform {
 }
 
 provider "aws" {
-  access_key = "${var.aws_access_id}"
-  secret_key = "${var.aws_secret_key}"
-  region     = "${var.region}"
   version = "~> 1.8"
 }
 
 
 data "aws_subnet" "subnet" {
-## id = "${var.subnet_subnet_id}"
-## added as per training example
-  vpc_id =  "${var, vpc_id} " // generated
+  vpc_id =  "${var.vpc_id} " // generated
   availability_zone =  "${var.availability_zone} "
 }
 

@@ -4,21 +4,6 @@
 ##
 #####################################################################
 
-variable "aws_access_id" {
-  type = "string"
-  description = "Generated"
-}
-
-variable "aws_secret_key" {
-  type = "string"
-  description = "Generated"
-}
-
-variable "region" {
-  type = "string"
-  description = "Generated"
-}
-
 variable "web_server_ami" {
   type = "string"
   description = "Generated"

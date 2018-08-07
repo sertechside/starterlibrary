@@ -27,48 +27,6 @@
   "output_groups": [ ],
   "template_input_params": [
     {
-      "name": "aws_access_id",
-      "label": "Aws Access Id",
-      "description": "Generated",
-      "type": "string",
-      "default": "",
-      "validation": "",
-      "group_name": "instances",
-      "required": true,
-      "secured": false,
-      "hidden": false,
-      "immutable": false,
-      "immutable_after_create": false
-    },
-    {
-      "name": "aws_secret_key",
-      "label": "Aws Secret Key",
-      "description": "Generated",
-      "type": "string",
-      "default": "",
-      "validation": "",
-      "group_name": "instances",
-      "required": true,
-      "secured": false,
-      "hidden": false,
-      "immutable": false,
-      "immutable_after_create": false
-    },
-    {
-      "name": "region",
-      "label": "Region",
-      "description": "Generated",
-      "type": "string",
-      "default": "",
-      "validation": "",
-      "group_name": "instances",
-      "required": true,
-      "secured": false,
-      "hidden": false,
-      "immutable": false,
-      "immutable_after_create": false
-    },
-    {
       "name": "web_server_ami",
       "label": "Web Server Ami",
       "description": "Generated",
@@ -87,7 +45,7 @@
       "label": "Web Server Aws Instance Type",
       "description": "Generated",
       "type": "string",
-      "default": "",
+      "default": "t2.medium",
       "validation": "",
       "group_name": "instances",
       "required": true,
@@ -101,7 +59,7 @@
       "label": "Availability Zone",
       "description": "Generated",
       "type": "string",
-      "default": "",
+      "default": "us-east-1d",
       "validation": "",
       "group_name": "instances",
       "required": true,
@@ -143,7 +101,7 @@
       "label": "Db Server Aws Instance Type",
       "description": "Generated",
       "type": "string",
-      "default": "",
+      "default": "t2-medium",
       "validation": "",
       "group_name": "instances",
       "required": true,
@@ -209,5 +167,26 @@
       "immutable_after_create": false
     }
   ],
-  "template_output_params": [ ]
+  "template_output_params": [
+    {
+      "name": "db_server_ip_address",
+      "label": "Db Server Ip Address",
+      "description": "Db Server Ip Address",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    },
+    {
+      "name": "web_server_ip_address",
+      "label": "Web Server Ip Address",
+      "description": "Web Server Ip Address",
+      "group_name": "",
+      "secured": false,
+      "hidden": false,
+      "shortname": "",
+      "type": "string"
+    }
+  ]
 }
