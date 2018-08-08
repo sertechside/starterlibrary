@@ -49,8 +49,3 @@ variable "group_name" {
   description = "Generated"
 }
 
-variable "group_name_vpc_id" {
-  type = "string"
-  description = "Generated"
-}
-

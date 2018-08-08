@@ -20,18 +20,13 @@ data "aws_subnet" "subnet" {
   availability_zone =  "${var.availability_zone} "
 }
 
-data "aws_security_group" "group_name" {
-  name = "${var.group_name}"
-  vpc_id = "${var.group_name_vpc_id}"
-}
-
 resource "aws_instance" "web_server" {
   ami = "${var.web_server_ami}"
   key_name = "${aws_key_pair.auth.id}"
   instance_type = "${var.web_server_aws_instance_type}"
   availability_zone = "${var.availability_zone}"
   subnet_id  = "${data.aws_subnet.subnet.id}"
-  vpc_security_group_ids = ["${data.aws_security_group.group_name.id}"]
+  vpc_security_group_ids = ["${aws_security_group.group_name.id}"]
   tags {
     Name = "${var.web_server_name}"
   }
@@ -43,7 +38,7 @@ resource "aws_instance" "db_server" {
   instance_type = "${var.db_server_aws_instance_type}"
   availability_zone = "${var.availability_zone}"
   subnet_id  = "${data.aws_subnet.subnet.id}"
-  vpc_security_group_ids = ["${data.aws_security_group.group_name.id}"]
+  vpc_security_group_ids = ["${aws_security_group.group_name.id}"]
   tags {
     Name = "${var.db_server_name}"
   }
@@ -56,5 +51,26 @@ resource "tls_private_key" "ssh" {
 resource "aws_key_pair" "auth" {
     key_name = "aws-temp-public-key"
     public_key = "${tls_private_key.ssh.public_key_openssh}"
+}
+
+resource "aws_security_group" "group_name" {
+  name = "${var.group_name}"
+  description = "TODO"
+  vpc_id = "${var.vpc_id}"
+  ingress {
+    from_port = 2000
+    to_port = 5010
+    protocol = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  egress {
+    from_port = 0
+    to_port = 0
+    protocol = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  tags {
+    Name = "group_name"
+  }
 }
 
