@@ -1,0 +1,14 @@
+{
+   "name": "test-cam-pro",
+   "description": "Description for test-cam-pro.",
+   "type": "userCreated",
+   "manifest": {
+     "template_type": "Terraform",
+     "template_format": "Amazon EC2",
+     "template_provider": "Other"
+   },
+   "metadata": {
+     "displayName": "test-cam-pro",
+     "bullets": []
+   }
+ }
