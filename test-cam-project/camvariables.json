@@ -4,14 +4,6 @@
   "output_namespace": "",
   "input_groups": [
     {
-      "name": "Instances-aws_instance.web_server",
-      "label": "Instances - aws_instance.web_server"
-    },
-    {
-      "name": "Other-aws",
-      "label": "Other - aws"
-    },
-    {
       "name": "instances",
       "label": "Instances"
     },
@@ -31,7 +23,11 @@
       "label": "Web Server Ami",
       "description": "Generated",
       "type": "string",
+<<<<<<< Upstream, based on 8f20dea1c026518b518baf6af7c39d36e909e99f
       "default": "mi-08ae0d592828d8d8d",
+=======
+      "default": "ami-08ae0d592828d8d8d",
+>>>>>>> 726ebd5 set  default value for all variables
       "validation": "",
       "group_name": "instances",
       "required": true,
