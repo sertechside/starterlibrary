@@ -7,6 +7,7 @@
 variable "web_server_ami" {
   type = "string"
   description = "Generated"
+  default = "ami-08ae0d592828d8d8d"
 }
 
 variable "web_server_aws_instance_type" {
@@ -27,6 +28,7 @@ variable "web_server_name" {
 variable "db_server_ami" {
   type = "string"
   description = "Generated"
+  default = "ami-0e87372707f2cc1c0"
 }
 
 variable "db_server_aws_instance_type" {
@@ -48,5 +50,4 @@ variable "group_name" {
   type = "string"
   description = "Generated"
 }
-
 
