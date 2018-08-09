@@ -18,6 +18,10 @@
     {
       "name": "Security",
       "label": "Security"
+    },
+    {
+      "name": "aws_ebs_volume_storage",
+      "label": "aws_ebs_volume Storage"
     }
   ],
   "output_groups": [ ],
@@ -142,6 +146,34 @@
       "default": "svt-cam-rome",
       "validation": "",
       "group_name": "Security",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "web-volume_volume_size",
+      "label": "Web Volume Volume Size",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "aws_ebs_volume_storage",
+      "required": true,
+      "secured": false,
+      "hidden": false,
+      "immutable": false,
+      "immutable_after_create": false
+    },
+    {
+      "name": "db-volume_volume_size",
+      "label": "Db Volume Volume Size",
+      "description": "Generated",
+      "type": "string",
+      "default": "",
+      "validation": "",
+      "group_name": "aws_ebs_volume_storage",
       "required": true,
       "secured": false,
       "hidden": false,

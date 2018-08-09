@@ -49,4 +49,14 @@ variable "group_name" {
   description = "Generated"
 }
 
+variable "web-volume_volume_size" {
+  type = "string"
+  description = "Generated"
+}
+
+variable "db-volume_volume_size" {
+  type = "string"
+  description = "Generated"
+}
+
 

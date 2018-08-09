@@ -57,3 +57,25 @@ resource "aws_key_pair" "auth" {
     public_key = "${tls_private_key.ssh.public_key_openssh}"
 }
 
+resource "aws_ebs_volume" "web-volume" {
+  availability_zone = "${var.availability_zone}"
+  size              = "${var.web-volume_volume_size}"
+}
+
+resource "aws_ebs_volume" "db-volume" {
+  availability_zone = "${var.availability_zone}"
+  size              = "${var.db-volume_volume_size}"
+}
+
+resource "aws_volume_attachment" "web-server_web-volume_volume_attachment" {
+  device_name = "/dev/sdh"
+  volume_id   = "${aws_ebs_volume.web-volume.id}"
+  instance_id = "${aws_instance.web-server.id}"
+}
+
+resource "aws_volume_attachment" "db-server_db-volume_volume_attachment" {
+  device_name = "/dev/sdh"
+  volume_id   = "${aws_ebs_volume.db-volume.id}"
+  instance_id = "${aws_instance.db-server.id}"
+}
+
