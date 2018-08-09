@@ -4,23 +4,19 @@
   "output_namespace": "",
   "input_groups": [
     {
-      "name": "Instances-aws_instance.web_server",
-      "label": "Instances - aws_instance.web_server"
+      "name": "Globals",
+      "label": "Globals"
     },
     {
-      "name": "Other-aws",
-      "label": "Other - aws"
+      "name": "Instances-aws_instance.db-server",
+      "label": "Instances - aws_instance.db-server"
     },
     {
-      "name": "instances",
-      "label": "Instances"
+      "name": "Instances-aws_instance.web-server",
+      "label": "Instances - aws_instance.web-server"
     },
     {
-      "name": "aws_instance_networks",
-      "label": "aws_instance Networks"
-    },
-    {
-      "name": "security",
+      "name": "Security",
       "label": "Security"
     }
   ],
@@ -33,7 +29,7 @@
       "type": "string",
       "default": "ami-08ae0d592828d8d8d",
       "validation": "",
-      "group_name": "instances",
+      "group_name": "Instances-aws_instance.web-server",
       "required": true,
       "secured": false,
       "hidden": false,
@@ -47,7 +43,7 @@
       "type": "string",
       "default": "t2.medium",
       "validation": "",
-      "group_name": "instances",
+      "group_name": "Instances-aws_instance.web-server",
       "required": true,
       "secured": false,
       "hidden": false,
@@ -61,7 +57,7 @@
       "type": "string",
       "default": "us-east-1d",
       "validation": "",
-      "group_name": "instances",
+      "group_name": "Globals",
       "required": true,
       "secured": false,
       "hidden": false,
@@ -75,7 +71,7 @@
       "type": "string",
       "default": "web-server",
       "validation": "",
-      "group_name": "instances",
+      "group_name": "Instances-aws_instance.web-server",
       "required": true,
       "secured": false,
       "hidden": false,
@@ -89,7 +85,7 @@
       "type": "string",
       "default": "ami-0e87372707f2cc1c0",
       "validation": "",
-      "group_name": "instances",
+      "group_name": "Instances-aws_instance.db-server",
       "required": true,
       "secured": false,
       "hidden": false,
@@ -103,7 +99,7 @@
       "type": "string",
       "default": "t2.medium",
       "validation": "",
-      "group_name": "instances",
+      "group_name": "Instances-aws_instance.db-server",
       "required": true,
       "secured": false,
       "hidden": false,
@@ -117,7 +113,7 @@
       "type": "string",
       "default": "db-server",
       "validation": "",
-      "group_name": "instances",
+      "group_name": "Instances-aws_instance.db-server",
       "required": true,
       "secured": false,
       "hidden": false,
@@ -129,9 +125,9 @@
       "label": "Vpc Id",
       "description": "Generated",
       "type": "string",
-      "default": "vpc-6c51be09",
+      "default": "vpc-0e7e0576",
       "validation": "",
-      "group_name": "",
+      "group_name": "Globals",
       "required": true,
       "secured": false,
       "hidden": false,
@@ -143,9 +139,9 @@
       "label": "Group Name",
       "description": "Generated",
       "type": "string",
-      "default": "cam-svt-rm-grp",
+      "default": "svt-cam-rome",
       "validation": "",
-      "group_name": "security",
+      "group_name": "Security",
       "required": true,
       "secured": false,
       "hidden": false,
