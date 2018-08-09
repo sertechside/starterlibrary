@@ -4,9 +4,9 @@
 ##
 #####################################################################
 
-output "db_server_ip_address" { 
+output "db-server_ip_address" { 
   value = "${aws_instance.db-server.public_ip} "   
 }
-output "web_server_ip_address" { 
+output "web-server_ip_address" { 
   value = "${aws_instance.web-server._public_ip} "   
 }

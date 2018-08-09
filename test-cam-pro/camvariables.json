@@ -155,7 +155,7 @@
   ],
   "template_output_params": [
     {
-      "name": "db_server_ip_address",
+      "name": "db-server_ip_address",
       "label": "Db Server Ip Address",
       "description": "Db Server Ip Address",
       "group_name": "",
@@ -165,7 +165,7 @@
       "type": "string"
     },
     {
-      "name": "web_server_ip_address",
+      "name": "web-server_ip_address",
       "label": "Web Server Ip Address",
       "description": "Web Server Ip Address",
       "group_name": "",
