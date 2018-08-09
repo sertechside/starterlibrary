@@ -1,6 +1,6 @@
 {
    "name": "test-cam-pro",
-   "description": "Description for test-cam-pro.",
+   "description": "Description for test-cam-pro. Test git update",
    "type": "userCreated",
    "manifest": {
      "template_type": "Terraform",
